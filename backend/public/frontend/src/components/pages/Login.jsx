@@ -26,7 +26,7 @@ const Login = () => {
         body: JSON.stringify({ username, password }),
       };
 
-      const request = await fetch("http://localhost:5000/auth/login", config);
+      const request = await fetch("/auth/login", config);
       const result = await request.json();
       console.log(result);
       if (!result.error) {

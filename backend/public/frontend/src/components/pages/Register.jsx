@@ -20,10 +20,7 @@ const Register = () => {
         },
         body: JSON.stringify(user),
       };
-      const request = await fetch(
-        "http://localhost:5000/auth/register",
-        config
-      );
+      const request = await fetch("/auth/register", config);
       const result = await request.json();
       if (!result.error) {
         setMessage(

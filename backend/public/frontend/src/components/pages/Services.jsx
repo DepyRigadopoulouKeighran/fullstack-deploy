@@ -4,7 +4,7 @@ const Services = () => {
   const [services, setServices] = useState(null);
   useEffect(() => {
     const getServices = async () => {
-      const request = await fetch("http://localhost:5000/services");
+      const request = await fetch("/services");
       const result = await request.json();
       console.log(result);
       if (!result.error) {
