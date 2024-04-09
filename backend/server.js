@@ -23,7 +23,7 @@ app.use("/auth", authRouter);
 app.use("/services", serviceRouter);
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/frontend/dist/index.html"));
+  res.sendFile(path.resolve(__dirname, "/public/frontend/dist/index.html"));
 });
 
 app.use((err, req, res, next) => {
