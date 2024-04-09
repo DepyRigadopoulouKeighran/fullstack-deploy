@@ -28,7 +28,7 @@ app.use((err, req, res, next) => {
     .send({ error: err.message || "Something went wrong!" });
 });
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`[SERVER] running on http://localhost:${port}`);
 });
 
