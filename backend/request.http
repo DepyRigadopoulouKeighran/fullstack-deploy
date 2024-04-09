@@ -1,0 +1,47 @@
+POST http://localhost:9999/auth/register
+Content-Type: application/json
+
+{
+"username":"jayjay",
+"email":"kaffjh@example.com",
+"password":"123abc123",
+"location":"somewhere"
+
+}
+
+###1
+POST http://localhost:9999/auth/login
+Content-Type: application/json
+
+{
+"username":"jayjay",
+"password":"123abc123"
+
+}
+
+###1
+POST http://localhost:9999/services
+Content-Type: application/json
+
+{
+"userId":"66054b6efd83a02cbd7c2031",
+"title":"english Teacher",
+"description":"i am good in teaching",
+"category":"teaching"  ,
+"price":60,
+"location":"hamburg"
+
+}
+
+###
+
+GET http://localhost:9999/services
+
+
+
+
+
+
+###
+
+DELETE  http://localhost:9999/auth/users

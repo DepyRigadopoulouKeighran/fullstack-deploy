@@ -1,0 +1,23 @@
+p{
+    color: green;
+}
+
+nav{
+     display: flex;
+     justify-content: space-between;
+}
+
+nav ul {
+display: flex;
+
+}
+
+ul li {
+    margin-left:1rem ;
+    list-style-type: none;
+}
+ul a{
+
+    color: black;
+}
+
