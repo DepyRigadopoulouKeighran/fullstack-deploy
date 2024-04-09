@@ -22,12 +22,6 @@ app.use(express.static(path.join(__dirname, "/public/frontend/dist")));
 app.use("/auth", authRouter);
 app.use("/services", serviceRouter);
 
-app.get("*", (req, res) => {
-  res.sendFile(
-    path.resolve(__dirname, "public", "frontend", "dist", "index.html")
-  );
-});
-
 app.use((err, req, res, next) => {
   res
     .status(err.status || 500)
@@ -36,4 +30,8 @@ app.use((err, req, res, next) => {
 
 app.listen(port, () => {
   console.log(`[SERVER] running on http://localhost:${port}`);
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "/public/frontend/dist/index.html"));
 });
