@@ -33,5 +33,7 @@ app.listen(port, () => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "/public/frontend/dist/index.html"));
+  res.sendFile(
+    path.resolve(__dirname, "public", "frontend", "dist", "index.html")
+  );
 });
